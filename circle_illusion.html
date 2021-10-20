@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --main-color: rgb(39, 61, 189);
+        }
+
+        .text{
+            font-size: 20px;
+            text-transform: uppercase;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            margin-top: 20vh;
+        }
+
+        .container{
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            background: rgba(128, 128, 128, 0.637);
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            border-radius: 200px;
+        }
+
+        .axis{
+            position: absolute;
+            width: 400px;
+            height: 1px;
+            background-color: transparent;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        #a2{
+            transform: rotate(22.5deg);
+        }
+
+        #a3{
+            transform: rotate(45deg);
+        }
+
+        #a4{
+            transform: rotate(67.5deg);
+        }
+
+        #a5{
+            transform: rotate(90deg);
+        }
+
+        #a6{
+            transform: rotate(112.5deg);
+        }
+
+        #a7{
+            transform: rotate(135deg);
+        }
+
+        #a8{
+            transform: rotate(157.5deg);
+        }
+
+        .container:hover .axis{
+            background-color: white;
+        }
+        
+        .ball{
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            background: var(--main-color);
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        #i1{
+            animation: slide 2s ease-in-out infinite alternate;
+        }
+
+        #i2{
+            animation: slide2 2s ease-in-out -1s infinite alternate;
+        }
+
+        #i3{
+            animation: slide3 2s ease-in-out -0.5s infinite alternate;
+        }
+
+        #i4{
+            animation: slide4 2s ease-in-out 0.75s infinite alternate;
+        }
+
+        #i5{
+            animation: slide5 2s ease-in-out 0.25s infinite alternate;
+        }
+        
+        #i6{
+            animation: slide6 2s ease-in-out 1.25s infinite alternate;
+        }
+
+        #i7{
+            animation: slide7 2s ease-in-out 0.5s infinite alternate;
+        }
+
+        #i8{
+            animation: slide8 2s ease-in-out -2.25s infinite alternate;
+        }
+
+        @keyframes slide{
+            0%{
+            transform: translateX(-185px);
+            }
+            100%{
+            transform: translateX(185px);
+            }
+        }
+        
+        @keyframes slide2{
+            0%{
+            transform: translateY(-185px);
+            }
+            100%{
+            transform: translateY(185px);
+            }
+        }
+        
+        @keyframes slide3{
+            0%{
+            transform: translateY(-130px) translateX(-130px);
+            }
+            100%{
+            transform: translateY(130px) translateX(130px);
+            }
+        }
+        
+        @keyframes slide4{
+            0%{
+            transform: rotate(67.5deg) translateX(130px) translateY(130px);
+            }
+            100%{
+            transform: rotate(67.5deg) translateX(-130px) translateY(-130px);
+            }
+        }
+
+        @keyframes slide5{
+            0%{
+            transform: rotate(112.5deg) translateX(130px) translateY(130px);
+            }
+            100%{
+            transform: rotate(112.5deg) translateX(-130px) translateY(-130px);
+            }
+        }
+
+        @keyframes slide6{
+            0%{
+            transform: rotate(22.5deg) translateX(130px) translateY(130px);
+            }
+            100%{
+            transform: rotate(22.5deg) translateX(-130px) translateY(-130px);
+            }
+        }
+
+        @keyframes slide7{
+            0%{
+            transform: rotate(90deg) translateX(130px) translateY(130px);
+            }
+            100%{
+            transform: rotate(90deg) translateX(-130px) translateY(-130px);
+            }
+        }
+
+        @keyframes slide8{
+            0%{
+            transform: rotate(-22.5deg) translateX(130px) translateY(130px);
+            }
+            100%{
+            transform: rotate(-22.5deg) translateX(-130px) translateY(-130px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text">Hover over the grey circle to see axes!</div>
+    <div class='wrap'>
+        <div class='container'>
+          <div class="axis" id="a1"></div>
+          <div class="axis" id="a2"></div>
+          <div class="axis" id="a3"></div>
+          <div class="axis" id="a4"></div>
+          <div class="axis" id="a5"></div>
+          <div class="axis" id="a6"></div>
+          <div class="axis" id="a7"></div>
+          <div class="axis" id="a8"></div>
+
+          <div class='ball' id="i1"></div>
+          <div class='ball' id="i2"></div>
+          <div class='ball' id="i3"></div>
+          <div class='ball' id="i4"></div>
+          <div class='ball' id="i5"></div>
+          <div class='ball' id="i6"></div>
+          <div class='ball' id="i7"></div>
+          <div class='ball' id="i8"></div>
+        </div>
+      </div>
+</body>
+</html>
